@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="heading">Model Driven Approach (Reactive Form)</div>
+  <div class="form-container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group mb-3">
+        <label for="uname">Username</label>
+        <input type="text" class="form-control" id="uname" formControlName="uname" />
+        <small *ngIf="!myForm.get('uname')?.valid && !myForm.get('uname')?.touched">Username is required</small>
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="emailAddress">Email address</label>
+        <input type="email" class="form-control" id="emailAddress" formControlName="emailAddress" />
+        <small *ngIf="myForm.get('emailAddress')?.errors?.['required'] && myForm.get('emailAddress')?.touched">
+          Email Address is required
+        </small>
+        <small *ngIf="!myForm.get('email')?.errors?.['email'] && myForm.get('email')?.touched">
+          Email Address is valid
+        </small>
+        
+
+
+      </div>
+
+      <div class="form-group form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="readTerms" formControlName="readTerms" />
+        <label class="form-check-label" for="readTerms">I have read terms and conditions</label>
+      </div>
+      <div class="d-flex justify-content-between">
+      <button type="button" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="accept()">Accept</button></div>
+    </form>
+  </div>
+</div>

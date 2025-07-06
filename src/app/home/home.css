@@ -1,0 +1,30 @@
+.home-container {
+  background-color: #e8c5f3; /* light purple */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  font-size: 48px;
+  color: #5b2c6f;
+  margin-bottom: 40px;
+}
+
+.link {
+  font-size: 24px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.orange {
+  color: #e67e22;
+}
+
+.green {
+  color: #27ae60;
+}

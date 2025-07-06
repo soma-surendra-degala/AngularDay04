@@ -1,0 +1,33 @@
+.container {
+  background-color: #f3c5f5; /* light purple */
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #6a1b9a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+
+}
+small{
+    color: red;
+}
